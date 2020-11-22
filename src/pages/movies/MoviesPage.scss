@@ -1,0 +1,11 @@
+.movies-page {
+  .movie-filter {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .movie-filter {
+    margin-top: 10px !important;
+  }
+}

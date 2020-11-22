@@ -1,0 +1,53 @@
+@import '../../../../assets/styles/variables';
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  tr {
+    border: 2px solid $brand-grey;
+    border-right: none;
+    border-left: none;
+
+    td {
+      text-align: left;
+      cursor: pointer;
+
+      .row-header {
+        display: flex;
+        align-items: center;
+        padding: 10px 0 10px 5px;
+
+        .icon {
+          transition: .3s;
+        }
+
+        .row-title {
+          margin-left: 15px;
+          font-weight: 500;
+          color: $brand-dark;
+        }
+      }
+
+      .expanded-content {
+        margin-left: 30px;
+        display: none;
+      }
+    }
+
+    &.expanded {
+      td {
+        .row-header {
+          .icon {
+            transform: rotate(90deg);
+          }
+        }
+
+        .expanded-content {
+          margin-top: 20px;
+          display: block;
+        }
+      }
+    }
+  }
+}

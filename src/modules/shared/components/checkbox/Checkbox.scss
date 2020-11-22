@@ -1,0 +1,52 @@
+@import '../../../../assets/styles/variables';
+
+.checkbox {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  content: '';
+  user-select: none;
+  height: 18px;
+
+  &-title {
+    padding-left: 25px;
+  }
+
+  &-body {
+    background: $brand-white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border: 1px solid $brand-purple;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    &:after {
+      content: '';
+      display: none;
+      position: absolute;
+      left: 5px;
+      top: 2px;
+      width: 3px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  input {
+    display: none;
+    &:checked {
+      ~ .checkbox-body {
+        background: $brand-purple;
+      }
+    }
+  }
+
+  input:checked ~ .checkbox-body:after {
+    display: block;
+  }
+}

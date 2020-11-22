@@ -1,0 +1,24 @@
+.movie-finder {
+  display: flex;
+  align-items: center;
+
+  .input-control {
+    padding: 7px;
+    input {
+      font-size: 19px;
+    }
+  }
+
+  .btn {
+    margin-left: 5px;
+    height: 37px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .movie-finder {
+    .input-control {
+      width: 100% !important;
+    }
+  }
+}

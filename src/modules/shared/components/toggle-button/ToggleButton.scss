@@ -1,0 +1,48 @@
+@import '../../../../assets/styles/variables';
+
+.toggle-button {
+  display: flex;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 15px;
+    min-height: 30px;
+    min-width:  20px;
+    color: $brand-dark;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: -1px;
+
+    .icon {
+      align-self: center;
+      margin-bottom: 8px;
+      background: $brand-dark;
+    }
+
+    input:checked {
+      ~ .selection-indicator {
+        background: $brand-purple;
+      }
+
+      ~ .button-title {
+        color: $brand-purple;
+      }
+
+      ~ .icon {
+        color: $brand-purple;
+        background: $brand-purple;
+      }
+    }
+
+    .selection-indicator {
+      height: 4px;
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+
+  input {
+    display: none;
+  }
+}

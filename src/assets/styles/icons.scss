@@ -1,0 +1,24 @@
+.icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position-x: 0;
+
+  &.icon-hide {
+    mask: url('../icons/hide.svg');
+  }
+
+  &.icon-show {
+    mask: url('../icons/show.svg');
+  }
+
+  &.icon-chevron {
+    height: 16px;
+    width: 16px;
+    background-size: 16px 16px;
+    background-image: url('../icons/chevron.svg');
+  }
+}
